@@ -1,22 +1,22 @@
-// backend/server.js
-
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-require("dotenv").config(); // 환경 변수 사용
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const SECRET_KEY = process.env.JWT_SECRET || "koad9401";
 
-// MySQL 연결 설정
+// MySQL 설정
 const db = mysql.createConnection({
   host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "koreamg_user", // 전용 MySQL 사용자
-  password: process.env.DB_PASSWORD || "koad9401", // 사용자의 비밀번호
-  database: process.env.DB_NAME || "koreamg_db", // 데이터베이스 이름
+  user: process.env.DB_USER || "koreamg_user",
+  password: process.env.DB_PASSWORD || "koad9401",
+  database: process.env.DB_NAME || "koreamg_db",
 });
 
-// MySQL 연결
 db.connect((err) => {
   if (err) {
     console.error("MySQL 연결 실패:", err);
@@ -25,26 +25,117 @@ db.connect((err) => {
   console.log("MySQL 연결 성공!");
 });
 
-// 미들웨어 설정
 app.use(cors());
 app.use(express.json());
 
-// 기본 라우트 (API 테스트)
-app.get("/", (req, res) => {
-  res.send("서버가 정상적으로 동작합니다.");
+// 로그인 API
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+
+  // 데이터베이스에서 사용자 정보 확인
+  db.query(
+    "SELECT * FROM users WHERE username = ?",
+    [username],
+    async (err, results) => {
+      if (err) return res.status(500).json({ message: "로그인 오류" });
+      if (results.length === 0)
+        return res.status(401).json({ message: "사용자가 없습니다." });
+
+      const user = results[0];
+
+      // 비밀번호 비교
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch)
+        return res
+          .status(401)
+          .json({ message: "비밀번호가 일치하지 않습니다." });
+
+      // JWT 토큰 발급
+      const token = jwt.sign(
+        { id: user.id, username: user.username },
+        SECRET_KEY,
+        {
+          expiresIn: "1h",
+        }
+      );
+
+      res.json({ token });
+    }
+  );
 });
 
-// 사용자 목록 가져오기 API 엔드포인트
-app.get("/api/users", (req, res) => {
-  const query = "SELECT * FROM users";
-  db.query(query, (err, results) => {
-    if (err) {
-      console.error("사용자 데이터를 가져오는 중 오류 발생:", err);
-      return res.status(500).json({ error: "Internal Server Error" });
+// 사용자 등록
+app.post("/register", async (req, res) => {
+  const { username, password } = req.body;
+
+  // 비밀번호 해싱
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  db.query(
+    "INSERT INTO users (username, password) VALUES (?, ?)",
+    [username, hashedPassword],
+    (err, results) => {
+      if (err) {
+        return res.status(500).json({ message: "등록 오류" });
+      }
+      res.status(201).json({ message: "사용자 등록 성공" });
     }
-    res.json(results);
-  });
+  );
 });
+
+// 사용자 로그인
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+
+  // 사용자 정보 확인
+  db.query(
+    "SELECT * FROM users WHERE username = ?",
+    [username],
+    async (err, results) => {
+      if (err) return res.status(500).json({ message: "로그인 오류" });
+      if (results.length === 0)
+        return res.status(401).json({ message: "사용자가 없습니다." });
+
+      const user = results[0];
+
+      // 비밀번호 비교
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch)
+        return res
+          .status(401)
+          .json({ message: "비밀번호가 일치하지 않습니다." });
+
+      // JWT 토큰 발급
+      const token = jwt.sign(
+        { id: user.id, username: user.username },
+        SECRET_KEY,
+        {
+          expiresIn: "1h",
+        }
+      );
+
+      res.json({ token });
+    }
+  );
+});
+
+// 인증된 사용자 전용 라우트 (JWT 토큰 검증)
+app.get("/protected", verifyToken, (req, res) => {
+  res.json({ message: "인증된 사용자만 접근 가능합니다." });
+});
+
+// JWT 토큰 검증 미들웨어
+function verifyToken(req, res, next) {
+  const token = req.headers["authorization"];
+  if (!token) return res.status(403).json({ message: "토큰이 없습니다." });
+
+  jwt.verify(token.split(" ")[1], SECRET_KEY, (err, decoded) => {
+    if (err)
+      return res.status(401).json({ message: "토큰이 유효하지 않습니다." });
+    req.user = decoded;
+    next();
+  });
+}
 
 // 서버 실행
 app.listen(PORT, () => {
