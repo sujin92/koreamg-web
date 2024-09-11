@@ -1,0 +1,159 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(227, 227, 227, 0.169);
+  padding: 0 4vw;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 0;
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.697);
+}
+
+.logo {
+  width: 30vw;
+}
+
+header nav > .main-menu {
+  display: flex;
+  width: 40vw;
+}
+
+header nav > .main-menu li {
+  width: 10vw;
+  text-align: center;
+  font-size: 18px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav > .main-menu li a {
+  color: #fff;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 40vw;
+  padding: 30px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+nav:hover .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-content ul li a {
+  display: block;
+  width: 10vw;
+  font-size: 16px;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.navBg {
+  position: absolute;
+  width: 100%;
+  height: 520px;
+  background-color: rgba(0, 0, 0, 0.697);
+  left: 0;
+  z-index: -999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+nav:hover ~ .navBg {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.allmenuBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 30vw;
+  justify-content: right;
+}
+
+.allmenuBtn img {
+  cursor: pointer;
+}
+
+.allmenuBtn .closeBtn {
+  display: none;
+}
+
+.site-map {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.853);
+  width: 100vw;
+  height: 100vw;
+  z-index: -99;
+  top: 0;
+  display: none;
+}
+
+.site-map > div {
+  position: relative;
+  top: 15%;
+  padding: 0 150px;
+}
+
+.site-map div h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.site-map > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-box {
+  background-color: #ffffffd4;
+  width: 23%;
+  padding: 15px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.menu-box span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e74f2d;
+  margin-top: 6px;
+}
+
+.menu-box h2 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.menu-box li {
+  font-size: 16px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.menu-box li::marker {
+  color: #e74f2d;
+}

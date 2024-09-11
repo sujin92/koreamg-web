@@ -1,0 +1,140 @@
+.menuBar > .ledMenu {
+  border-bottom: 2px solid #e74f2d;
+}
+
+.contentInner {
+  position: relative;
+}
+
+.ledh2 {
+  margin-bottom: 150px !important;
+}
+
+.ledTitle {
+  position: absolute;
+  top: 200px;
+}
+
+.ledTitle strong {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 900;
+  top: 20px;
+  left: 21.1%;
+  color: rgb(245, 245, 245);
+  z-index: -999;
+}
+
+.ledTitle > h2 {
+  position: absolute;
+  font-size: 40px;
+  top: 50px;
+  left: 21.1%;
+  text-align: left;
+  font-weight: 700;
+  color: #e74f2d;
+}
+
+.ledInner {
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  padding: 80px 15%;
+  text-align: left;
+}
+
+.ledInner > div {
+  position: relative;
+}
+
+.ledInner > div h3 {
+  font-size: 24px;
+  margin-bottom: 60px;
+  line-height: 32px;
+}
+
+.ledInner > div li {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.ledInner > div h3::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 90px;
+  left: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  background-color: #e74f2d;
+}
+
+.contentLeft {
+  background-color: rgb(245, 245, 245);
+}
+
+.contentLeft > div {
+  margin-left: 50px;
+}
+
+.contentLeft > div h3::after {
+  left: -50px;
+}
+
+.solution {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.solution > h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 40px;
+  margin: 80px 0 50px;
+}
+
+.solutionStep {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.solutionStep > div {
+  width: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 8px #c7c7c7;
+  height: 75px;
+  border-radius: 50px;
+  border: 1px solid #e74f2d;
+  margin: 20px 0;
+}
+
+.solutionStep > div .imgWrapper {
+  display: flex;
+  box-shadow: 1px 1px 8px #c7c7c7;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+
+.solutionStep > div .imgWrapper img {
+  padding: 18px;
+}
+
+.solutionStep > div div {
+  width: 40%;
+  text-align: left;
+}
+
+.solutionStep > div div p {
+  margin-top: 8px;
+}
+
+.solutionStep > div > p {
+  font-size: 20px;
+  color: #e74f2d;
+  width: 15%;
+}

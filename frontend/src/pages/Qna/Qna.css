@@ -1,0 +1,94 @@
+.qnaBar .qnaMenu > h2 {
+  border-bottom: 2px solid #e74f2d;
+}
+
+.callInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.callInfo p {
+  margin: 0 20px 50px;
+}
+
+.callInfo p span {
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+.bar {
+  color: #e74f2d;
+  font-weight: 700;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.form-group:nth-of-type(5) {
+  align-items: flex-start;
+  padding: 17px 10px 5px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  width: 12%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+textarea {
+  resize: none;
+  height: 300px;
+  padding: 0 12px 12px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ddd;
+}
+
+.qnaBtn {
+  width: 200px;
+  background-color: #e74f2d;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 30px auto 80px;
+}
+
+.qnaBtn:hover {
+  background-color: #d4411b;
+}

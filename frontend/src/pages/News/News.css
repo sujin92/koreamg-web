@@ -1,0 +1,74 @@
+.newsBar .newsMenu > h2 {
+  border-bottom: 2px solid #e74f2d;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30% !important;
+  margin: 60px auto !important;
+}
+
+.search-bar input {
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 100%;
+}
+
+.search-bar input::placeholder {
+  color: #ccc;
+}
+
+.search-icon {
+  margin-left: -30px;
+  color: #e74f2d;
+  cursor: pointer;
+}
+
+.caseItem {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.caseItem div {
+  width: 380px;
+  text-align: left;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.caseItem img {
+  width: 380px;
+  border-radius: 20px;
+}
+
+.caseItem h2 {
+  font-size: 18px;
+  margin: 15px 0 8px 0;
+}
+
+.caseItem p {
+  font-size: 14px;
+  color: #666;
+}
+
+.pagenation {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 100px !important;
+}
+
+.pagenation > .svg-inline--fa {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.pagenation > p {
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+}

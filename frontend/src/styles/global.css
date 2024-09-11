@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "NanumSquareNeoLight";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquareNeoBold";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquareNeoExtraBold";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquareNeoHeavy";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquareNeoVariable";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.ttf)
+      format("truetype");
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color: #333333;
+  text-decoration: none;
+  font-family: "NanumSquareNeo";
+}
+button {
+  border: none;
+  font-family: "NanumSquareNeo";
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(172, 172, 172, 0.597);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(156, 156, 156, 0.1);
+}
+
+/* 공통css */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container > img {
+  width: 100%;
+}
+
+.innerTop {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.subTitle {
+  margin-bottom: 140px;
+  position: relative;
+}
+
+.subTitle h2 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.subTitle h2::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  top: 20px;
+  left: 6.6%;
+  background-color: #ffffff94;
+}
+
+.subTitle h1 {
+  font-size: 3.5em;
+  margin-top: 20px;
+  color: #fff;
+  line-height: 1.4em;
+}
+
+.menuNav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.menuNav .faHouse {
+  color: #fff;
+  font-size: 18px;
+}
+
+.menuNav span {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 20px;
+}
+
+.menuNav h2 {
+  color: #fff;
+  font-size: 18px;
+}
+
+.menuNav select {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: inherit;
+  color: #fff;
+}
+
+.menuNav select:focus {
+  outline: none;
+  border: none;
+}
+
+.menuBar {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: -3px;
+}
+
+.menuBar > a > h2 {
+  padding: 30px 40px;
+  font-size: 18px;
+}
+
+.contentInner {
+  text-align: center;
+}
+
+.contentInner > h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.contentInner > h2 {
+  font-size: 18px;
+  margin: 40px auto 60px;
+  width: 40%;
+  word-break: keep-all;
+  line-height: 26px;
+}
+
+.writeBtn {
+  background-color: #e74f2d;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  position: absolute;
+  right: 17%;
+  top: 0;
+}
+
+.submitBtn {
+  background-color: #e74f2d;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 35px;
+  border-radius: 5px;
+  margin: 30px auto;
+  display: flex;
+}

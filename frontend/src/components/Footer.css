@@ -1,0 +1,92 @@
+/* Footer 전체 스타일 */
+.footer {
+  background-color: #e74f2d;
+  padding: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 50px 50px 0 0;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-links h3,
+.footer-company-info h3 {
+  margin: 5px 0;
+}
+
+.footer-links h3 {
+  position: relative;
+  margin-right: 35px;
+  cursor: pointer;
+}
+
+.footer-links h3 a {
+  color: #fff;
+}
+
+.footer-company-info {
+  position: relative;
+}
+
+.footer-links h3:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  transform: translateY(-50%);
+  background-color: #ffffff8d;
+}
+
+.footer-links h3:nth-of-type(3)::after {
+  background-color: #ffffff00;
+}
+
+.footer-links h3::after {
+  content: "";
+  width: 1px;
+  height: 19px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  margin: 15px 0;
+}
+
+.footer-company-info > div {
+  display: flex;
+}
+
+.footer-company-info h3 {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.footer-links h3 {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer-copyright h3 {
+  color: #fff;
+}

@@ -1,0 +1,64 @@
+.downloadBar > .downloadMenu > h2 {
+  border-bottom: 2px solid #d44122;
+}
+
+.designated {
+  background-color: #f7f7f7;
+  width: 100% !important;
+  margin: 60px 0 150px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.designated > div {
+  width: 30%;
+  margin: 0 0 0 50px;
+  text-align: left;
+  z-index: 99;
+  position: relative;
+}
+
+.designated > div h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.designated > div h2::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  top: 60px;
+  left: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  background-color: #e74f2d;
+}
+
+.designated > div p {
+  font-size: 20px;
+  line-height: 26px;
+  word-break: keep-all;
+  width: 80%;
+}
+
+.bgLogo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.downloadBtn {
+  background-color: #e74f2d;
+  color: #fff;
+  font-size: 20px;
+  padding: 13px 50px;
+  border-radius: 5px;
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+.downloadBtn .svg-inline--fa {
+  margin-left: 10px;
+}

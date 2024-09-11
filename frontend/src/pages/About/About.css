@@ -1,0 +1,16 @@
+.aboutMenuBar > .aboutMenu > h2 {
+  border-bottom: 2px solid #d44122 !important;
+}
+
+.contentInner {
+  margin-top: 80px;
+}
+
+.aboutText {
+  font-size: 18px;
+  margin: 50px auto 150px;
+  width: 63%;
+  word-break: keep-all;
+  line-height: 26px;
+  text-align: left;
+}

@@ -1,0 +1,27 @@
+#map {
+  margin: 50px auto;
+  border-radius: 15px;
+}
+
+.mapContent {
+  display: flex;
+}
+
+.mapContent > div {
+  background-color: #fff;
+  box-shadow: 1px 1px 8px #c7c7c7;
+  width: 30%;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 100px;
+}
+
+.mapContent .svg-inline--fa {
+  font-size: 50px;
+  margin-bottom: 25px;
+  color: #d44122;
+}
+
+.contacMenuBar .contactMenu > h2 {
+  border-bottom: 2px solid #d44122 !important;
+}

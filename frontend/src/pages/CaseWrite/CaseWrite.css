@@ -1,0 +1,32 @@
+.writeContent {
+  width: 70%;
+  margin: 60px auto;
+}
+
+.writeContent > h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.writeContent > input {
+  border-bottom: none;
+  border-radius: 0;
+  padding: 12px;
+  border-color: #ccc;
+}
+
+.quill-editor {
+  height: 500px;
+  border: 1px solid #ccc;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-toolbar.ql-snow {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
