@@ -138,3 +138,123 @@
   color: #e74f2d;
   width: 15%;
 }
+
+.ledInner div div {
+  width: 100%;
+}
+
+@media all and (max-width: 1279px) {
+  .ledInner {
+    padding: 80px 10%;
+  }
+  .historyContent > div > img {
+    width: 36vw;
+  }
+  .solution {
+    width: 80%;
+  }
+  .solutionStep > div {
+    width: 240px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .ledInner > img {
+    width: 42vw;
+  }
+  .ledInner > div h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .ledInner > div li {
+    font-size: 16px;
+  }
+  .ledInner > div h3::after {
+    top: 80px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .ledInner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ledInner > div {
+    margin: 0;
+  }
+  .ledInner > div h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 95px;
+  }
+  .ledInner > div h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 30px;
+  }
+  .ledInner > img {
+    width: 370px;
+  }
+  .contentRight {
+    position: relative;
+  }
+  .contentRight > div {
+    position: absolute;
+    top: 330px;
+  }
+  .contentInner .ledInner:nth-of-type(3),
+  .contentInner .ledInner:nth-of-type(5) {
+    margin-bottom: 240px;
+  }
+  .solutionStep > div {
+    width: 185px;
+  }
+  .ledTitle strong {
+    font-size: 50px;
+    left: 0;
+    top: 35px;
+  }
+  .ledTitle > h2 {
+    left: 14%;
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .solution {
+    width: 90%;
+  }
+  .ledInner {
+    padding: 40px 0;
+  }
+  .contentRight > div {
+    top: 290px;
+  }
+  .solutionStep > div {
+    width: 165px;
+  }
+  .solutionStep > div {
+    height: 60px;
+  }
+  .solutionStep > div .imgWrapper {
+    height: 60px;
+    width: 60px;
+  }
+  .solutionStep > div div span {
+    font-size: 12px;
+  }
+  .solutionStep > div div p {
+    font-size: 14px;
+  }
+  .solutionStep > div > p {
+    font-size: 16px;
+  }
+  .solution > h2 {
+    font-size: 22px;
+  }
+  .contentInner .ledInner:nth-of-type(5) {
+    margin-bottom: 300px;
+  }
+}

@@ -27,11 +27,7 @@ function About() {
             <span>/</span>
             <h2>회사소개</h2>
             <span>/</span>
-            <select name="menu" id="menu">
-              <option value="about">회사소개</option>
-              <option value="history">연혁</option>
-              <option value="location">찾아오시는 길</option>
-            </select>
+            <h2>회사소개</h2>
           </div>
         </div>
       </div>
@@ -53,7 +49,7 @@ function About() {
           국가는 노인과 청소년의 복지향상을 위한 정책을 실시할 의무를 진다. 언론
           ·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
         </h2>
-        <img src="/assets/images/sub/about.jpg" alt="" />
+        <img src="/assets/images/sub/about.jpg" alt="" className="companyImg" />
         <p className="aboutText">
           국가는 노인과 청소년의 복지향상을 위한 정책을 실시할 의무를 진다.
           언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지

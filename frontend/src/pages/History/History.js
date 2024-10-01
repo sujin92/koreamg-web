@@ -27,11 +27,7 @@ function History() {
             <span>/</span>
             <h2>회사소개</h2>
             <span>/</span>
-            <select name="menu" id="menu">
-              <option value="about">회사소개</option>
-              <option value="history">연혁</option>
-              <option value="location">찾아오시는 길</option>
-            </select>
+            <h2>연혁</h2>
           </div>
         </div>
       </div>

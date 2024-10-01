@@ -6,7 +6,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30% !important;
   margin: 60px auto !important;
 }
 
@@ -28,31 +27,41 @@
   cursor: pointer;
 }
 
-.caseItem {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.newsContent .newsList,
+.newsLine {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 65vw;
 }
 
-.caseItem div {
-  width: 380px;
-  text-align: left;
-  margin-bottom: 50px;
+.newsItem {
   cursor: pointer;
 }
 
-.caseItem img {
-  width: 380px;
-  border-radius: 20px;
+.newsLine {
+  background-color: #eeeeee;
+  border-bottom: none !important;
+  border-radius: 5px;
 }
 
-.caseItem h2 {
-  font-size: 18px;
-  margin: 15px 0 8px 0;
+.newsLine .newsTitle {
+  text-align: center !important;
 }
 
-.caseItem p {
-  font-size: 14px;
-  color: #666;
+.newsContent .newsList .indexNum {
+  width: 5%;
+}
+
+.newsContent .newsList .newsTitle {
+  width: 80%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.newsContent .newsList .newsDate {
+  width: 15%;
 }
 
 .pagenation {
@@ -71,4 +80,36 @@
   font-size: 18px;
   margin: 0 10px;
   cursor: pointer;
+}
+
+@media all and (max-width: 1023px) {
+  .newsContent .newsList,
+  .newsLine {
+    width: 100%;
+  }
+  .newsContent .newsList .newsDate {
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .newsContent .newsList .indexNum {
+    display: none;
+  }
+  .newsContent .newsList .newsDate {
+    width: 32%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .newsContent {
+    width: 90% !important;
+  }
+  .newsContent .newsList,
+  .newsLine {
+    padding: 15px 10px;
+  }
+  .newsContent .newsList .newsTitle {
+    margin-left: 0;
+  }
 }

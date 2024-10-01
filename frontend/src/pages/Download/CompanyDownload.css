@@ -21,7 +21,7 @@
 }
 
 .designated > div h2 {
-  font-size: 36px;
+  font-size: 2.5vw;
   margin-bottom: 60px;
 }
 
@@ -41,6 +41,7 @@
   line-height: 26px;
   word-break: keep-all;
   width: 80%;
+  margin-bottom: 70px;
 }
 
 .bgLogo {
@@ -53,12 +54,84 @@
   background-color: #e74f2d;
   color: #fff;
   font-size: 20px;
-  padding: 13px 50px;
+  padding: 13px 1vw;
   border-radius: 5px;
-  margin-top: 70px;
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .downloadBtn .svg-inline--fa {
   margin-left: 10px;
+}
+
+@media all and (max-width: 1023px) {
+  .designated {
+    flex-direction: column;
+  }
+  .designated > img {
+    width: 400px;
+  }
+  .designated > div {
+    width: 80%;
+    text-align: center;
+    margin-left: 0;
+  }
+  .designated > div p {
+    margin: 0 auto 70px;
+  }
+  .designated > div h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+  }
+  .downloadBtn {
+    margin: 0 10px;
+  }
+  .bgLogo {
+    width: 250px !important;
+  }
+  .downBtn {
+    height: 90px;
+  }
+  .downloadBtn {
+    padding: 13px 20px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .designated > div h2 {
+    font-size: 28px;
+    margin: 20px 0 60px;
+  }
+  .designated > div h2::after {
+    top: 70px;
+  }
+  .designated > div p {
+    width: 90%;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .downBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 190px;
+  }
+  .downloadBtn {
+    margin: 10px auto;
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .designated > div h2 {
+    font-size: 24px;
+  }
+  .designated > div p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .downloadBtn {
+    font-size: 14px;
+  }
 }

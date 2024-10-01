@@ -46,10 +46,15 @@ form {
   padding: 17px 10px 5px;
 }
 
-label {
+.contact-form form .form-group label {
   font-size: 16px;
   font-weight: bold;
   width: 12%;
+  margin-bottom: 0;
+}
+
+.form-group > input {
+  border: none;
 }
 
 input,
@@ -91,4 +96,62 @@ textarea:focus {
 
 .qnaBtn:hover {
   background-color: #d4411b;
+}
+
+@media all and (max-width: 1023px) {
+  .callInfo {
+    flex-direction: column;
+  }
+  .callInfo p {
+    margin: 0 0 40px;
+  }
+  .bar {
+    display: none;
+  }
+  .callInfo p::after {
+    content: "";
+    width: 15px;
+    height: 1px;
+    margin-top: 35px;
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: #e74f2d;
+  }
+  .callInfo p:nth-of-type(5)::after {
+    width: 0;
+  }
+  .contact-form {
+    width: 80%;
+  }
+  .contact-form form .form-group label {
+    width: 15%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .callInfo p {
+    font-size: 14px;
+    margin: 0 0 25px;
+  }
+  .callInfo p::after {
+    margin-top: 25px;
+  }
+  .contact-form form .form-group label {
+    width: 28%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .contact-form {
+    width: 90%;
+    padding: 0px;
+    margin-top: 20px;
+  }
+  .contact-form form .form-group label {
+    font-size: 14px;
+  }
+  .qnaBtn {
+    font-size: 14px;
+  }
 }

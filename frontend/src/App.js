@@ -13,6 +13,9 @@ import Qna from "./pages/Qna/Qna";
 import CompanyDownload from "./pages/Download/CompanyDownload";
 import Login from "./pages/Login/Login";
 import CaseWrite from "./pages/CaseWrite/CaseWrite";
+import InstallCaseEdit from "./pages/InstallCaseEdit/InstallCaseEdit";
+import NewsWrite from "./pages/NewsWrite/NewsWrite";
+import NewsEdit from "./pages/NewsEdit/NewsEdit";
 
 function App() {
   return (
@@ -24,13 +27,16 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/led" element={<LEDBusiness />} />
         <Route path="/cases" element={<InstallCase />} />
-        <Route path="/detail" element={<InstallCaseDetail />} />
+        <Route path="/detail/:id" element={<InstallCaseDetail />} />
         <Route path="/news" element={<News />} />
-        <Route path="/newsDetail" element={<NewsDetail />} />
+        <Route path="/newsDetail/:id" element={<NewsDetail />} />
+        <Route path="/newsWrite" element={<NewsWrite />} />
+        <Route path="/newsEdit/:id" element={<NewsEdit />} />
         <Route path="/qna" element={<Qna />} />
         <Route path="/company" element={<CompanyDownload />} />
         <Route path="/login" element={<Login />} />
         <Route path="/casewrite" element={<CaseWrite />} />
+        <Route path="/caseedit/:id" element={<InstallCaseEdit />} />
       </Routes>
     </Router>
   );

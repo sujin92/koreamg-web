@@ -1,0 +1,23 @@
+.editContent {
+  width: 70%;
+  margin: 60px auto;
+}
+
+.editContent > h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.editBtnOk {
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #e74f2d;
+  color: #fff;
+  margin: 30px auto;
+}

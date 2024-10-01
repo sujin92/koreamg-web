@@ -25,3 +25,43 @@
 .contacMenuBar .contactMenu > h2 {
   border-bottom: 2px solid #d44122 !important;
 }
+
+@media all and (max-width: 1279px) {
+  .mapContent > div > p {
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  #map {
+    width: 80% !important;
+  }
+  .mapContent > div {
+    padding: 30px 10px;
+  }
+  .mapContent > div > p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media all and (max-width: 767px) {
+}
+
+@media all and (max-width: 480px) {
+  .mapContent {
+    flex-direction: column;
+    margin-bottom: 50px !important;
+  }
+  .mapContent > div {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 0;
+  }
+  .mapContent .svg-inline--fa {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+}

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src="/assets/images/logoWhite.png" alt="회사 로고" />
+          <img src="/assets/images/logowhite.png" alt="회사 로고" />
         </div>
         <div className="footer-links">
           <h3>

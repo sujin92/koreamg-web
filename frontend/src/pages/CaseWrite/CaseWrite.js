@@ -1,25 +1,51 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Editor } from "@toast-ui/react-editor";
+import "@toast-ui/editor/dist/toastui-editor.css";
 import "./CaseWrite.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import ReactQuill from "react-quill"; // Quill 에디터 임포트
-import "react-quill/dist/quill.snow.css"; // Quill 에디터 기본 스타일 임포트
+import axios from "axios";
 
 const CaseWrite = () => {
-  const [content, setContent] = useState(""); // Quill 에디터의 내용을 저장할 상태
+  const editorRef = useRef();
+  const navigate = useNavigate();
 
-  // Quill 에디터의 내용이 변경될 때 호출되는 함수
-  const handleEditorChange = (value) => {
-    setContent(value);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleSubmit = () => {
-    // 게시글 저장 로직
-    console.log("게시글 내용:", content);
-    // 서버에 게시글 내용을 저장하는 API 호출 등의 로직을 추가할 수 있습니다.
+    const title = e.target.title.value;
+    const file = e.target.file.files[0];
+    const content = editorRef.current.getInstance().getHTML();
+
+    if (!title || !content) {
+      alert("제목과 내용을 입력해주세요.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("content", content);
+    if (file) {
+      formData.append("thumbnail", file);
+    }
+
+    try {
+      // 게시글 저장 API 호출
+      await axios.post("http://localhost:3000/api/case-write", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+
+      navigate("/cases");
+    } catch (error) {
+      console.error("게시글 저장 중 오류 발생:", error);
+      alert("게시글 저장 중 오류가 발생했습니다.");
+    }
   };
 
   return (
@@ -55,30 +81,61 @@ const CaseWrite = () => {
 
       <div className="writeContent">
         <h2>게시글 작성</h2>
-        <input type="text" placeholder="제목을 입력해 주세요" />
-        <ReactQuill
-          value={content}
-          onChange={handleEditorChange}
-          theme="snow"
-          modules={{
-            toolbar: [
-              [{ header: "1" }, { header: "2" }, { font: [] }],
-              [{ size: [] }],
+        <form onSubmit={handleSubmit}>
+          <div className="formGroup">
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              placeholder="제목을 입력해 주세요"
+            />
+          </div>
 
-              [{ list: "ordered" }, { list: "bullet" }],
-              ["link", "image", "video"],
-              ["clean"],
-            ],
-          }}
-          className="quill-editor"
-        />
+          <div className="formGroup">
+            <input type="file" id="file" name="file" />
+          </div>
 
-        <button className="submitBtn" onClick={handleSubmit}>
-          저장
-        </button>
+          <div className="formGroup">
+            <Editor
+              initialValue=" "
+              previewStyle="vertical"
+              height="400px"
+              initialEditType="wysiwyg"
+              hideModeSwitch={true}
+              ref={editorRef}
+              hooks={{
+                addImageBlobHook: async (blob, callback) => {
+                  const formData = new FormData();
+                  formData.append("file", blob);
+
+                  try {
+                    const response = await axios.post(
+                      "http://localhost:3000/api/upload-image",
+                      formData,
+                      {
+                        headers: {
+                          "Content-Type": "multipart/form-data",
+                        },
+                      }
+                    );
+                    const imageUrl = `http://localhost:3000${response.data.url}`;
+                    callback(imageUrl, "alt text");
+                  } catch (error) {
+                    console.error("Image upload failed:", error);
+                  }
+                },
+              }}
+            />
+          </div>
+
+          <button className="submitBtn" type="submit">
+            저장
+          </button>
+        </form>
       </div>
 
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

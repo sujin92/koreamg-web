@@ -27,6 +27,14 @@
   border-bottom: 1px solid #d2d2d2;
 }
 
+.detailContent > div {
+  width: 100%;
+}
+
+.detailContent > div > p img {
+  width: 100%;
+}
+
 .detailPagenation {
   display: flex;
   justify-content: center;
@@ -54,4 +62,37 @@
   filter: drop-shadow(1px 1px 8px #c7c7c7);
   margin: 0 35px;
   width: 50px;
+}
+
+.detailBtn {
+  margin-top: 60px !important;
+}
+
+.detailBtn > button {
+  padding: 10px 20px;
+  margin: 0 20px;
+  border-radius: 5px;
+}
+
+.detailBtn > button:hover {
+  background-color: #e74f2d;
+  color: #fff;
+}
+
+@media all and (max-width: 480px) {
+  .detailTitle {
+    width: 90% !important;
+  }
+  .detailTitle > h2 {
+    font-size: 22px !important;
+  }
+  .detailTitle > p {
+    font-size: 14px !important;
+  }
+  .detailPagenation img {
+    width: 45px !important;
+  }
+  .detailPagenation p {
+    font-size: 14px !important;
+  }
 }

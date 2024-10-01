@@ -14,3 +14,44 @@
   line-height: 26px;
   text-align: left;
 }
+
+@media all and (max-width: 1279px) {
+  .aboutText {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .menuBar > a > h2 {
+    padding: 25px 0;
+    font-size: 16px;
+  }
+  .aboutText {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .companyImg {
+    width: 100%;
+  }
+  .aboutText {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 40px auto 100px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .contentInner {
+    margin-top: 50px;
+  }
+  .contentInner > h1 {
+    font-size: 22px;
+  }
+  .contentInner > h2 {
+    width: 90%;
+    font-size: 15px;
+    margin: 30px auto 40px;
+  }
+}

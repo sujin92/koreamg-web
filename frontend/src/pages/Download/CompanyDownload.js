@@ -4,7 +4,7 @@ import "./CompanyDownload.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faDownload, faBook } from "@fortawesome/free-solid-svg-icons";
 
 const CompanyDownload = () => {
   return (
@@ -27,11 +27,7 @@ const CompanyDownload = () => {
             <span>/</span>
             <h2>고객지원</h2>
             <span>/</span>
-            <select name="menu" id="menu">
-              <option value="news">한국미광 소식</option>
-              <option value="qna">문의하기</option>
-              <option value="download">다운로드</option>
-            </select>
+            <h2>다운로드</h2>
           </div>
         </div>
       </div>
@@ -57,10 +53,24 @@ const CompanyDownload = () => {
               저희 한국미광은 고객 여러분들의 힘을 얻어 그동안 축적된 기술력으로
               무한 성장의 잠재력을 가지고 다양한 제품 개발에 힘쓰고 있습니다.
             </p>
-            <button className="downloadBtn">
-              지명원 다운로드
-              <FontAwesomeIcon icon={faDownload} />
-            </button>
+            <div className="downBtn">
+              <a
+                href="/assets/files/book.pdf"
+                download="한국미광_지명원.pdf"
+                className="downloadBtn"
+              >
+                다운로드
+                <FontAwesomeIcon icon={faDownload} />
+              </a>
+              <a
+                href="https://online.fliphtml5.com/aljak/srhf/"
+                className="downloadBtn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                eBook <FontAwesomeIcon icon={faBook} />
+              </a>
+            </div>
           </div>
           <img src="/assets/icons/sub/bgLogo.png" alt="" className="bgLogo" />
         </div>

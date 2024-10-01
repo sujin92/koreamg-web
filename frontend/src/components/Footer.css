@@ -90,3 +90,83 @@
 .footer-copyright h3 {
   color: #fff;
 }
+
+@media all and (max-width: 1023px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-logo img {
+    width: 130px;
+  }
+  .footer-container {
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-links h3 {
+    padding: 0 20px;
+    margin: 0 10px 0 20px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .footer-company-info div {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-company-info div h3 {
+    font-size: 13px;
+    margin: 0 10px;
+  }
+  .footer-copyright {
+    font-size: 10px;
+  }
+  .footer-company-info h3 {
+    margin-right: 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .footer {
+    padding: 20px;
+  }
+  .footer-logo img {
+    width: 110px;
+  }
+  .footer-links h3 {
+    padding: 0 10px;
+  }
+  .footer-company-info div h3 {
+    font-size: 11px;
+  }
+  .footer-company-info h3 {
+    font-size: 11px;
+  }
+  .footer-company-info div:nth-of-type(2) {
+    flex-direction: column;
+  }
+  .footer-company-info div:nth-of-type(2) h3 {
+    margin: 2px 0;
+  }
+  .footer-copyright {
+    margin-top: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .footer-company-info div:nth-of-type(1) {
+    display: none;
+  }
+  .footer-company-info > h3 {
+    display: none;
+  }
+  .footer-links h3 {
+    font-size: 12px;
+  }
+}

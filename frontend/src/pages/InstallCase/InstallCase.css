@@ -28,20 +28,27 @@
   cursor: pointer;
 }
 
-.caseItem {
+.caseList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.caseItem div {
-  width: 380px;
+.caseItem {
+  width: 22vw !important;
+}
+
+.caseItem > div {
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 0px !important;
   cursor: pointer;
+  width: 22vw !important;
+  margin-bottom: 20px !important;
 }
 
 .caseItem img {
-  width: 380px;
+  width: 22vw !important;
+  height: 13vw;
   border-radius: 20px;
 }
 
@@ -71,4 +78,45 @@
   font-size: 18px;
   margin: 0 10px;
   cursor: pointer;
+}
+
+.pagenation p.active {
+  color: #e74f2d;
+  font-weight: bold;
+}
+
+@media all and (max-width: 1023px) {
+  .caseList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .caseItem {
+    width: 30vw !important;
+  }
+  .caseItem > div {
+    width: 30vw !important;
+  }
+  .caseItem img {
+    width: 30vw !important;
+    height: 17vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .search-bar {
+    width: 50% !important;
+  }
+  .caseList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .caseItem {
+    width: 70vw !important;
+  }
+  .caseItem > div {
+    width: 70vw !important;
+    text-align: center;
+  }
+  .caseItem img {
+    width: 70vw !important;
+    height: 38vw;
+  }
 }

@@ -1,0 +1,59 @@
+.writeNewse {
+  width: 70%;
+  margin: 60px auto;
+}
+
+.writeNewse > h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.strike,
+.hrline,
+.quote,
+.ordered-list,
+.task-list,
+.indent,
+.outdent,
+.codeblock,
+.bullet-list,
+.toastui-editor-toolbar-group > .table,
+.code,
+.toastui-editor-toolbar-divider {
+  display: none;
+}
+
+.detailContent > div > h1 {
+  font-size: 50px;
+}
+.detailContent > div > h2 {
+  font-size: 44px;
+}
+.detailContent > div > h3 {
+  font-size: 38px;
+}
+.detailContent > div > h4 {
+  font-size: 30px;
+}
+.detailContent > div > h5 {
+  font-size: 26px;
+}
+.detailContent > div > h6 {
+  font-size: 20px;
+}
+.detailContent > div > p {
+  font-size: 16px;
+}
+
+.detailContent > div > p strong {
+  font-weight: 900;
+}
+
+.detailContent > div > p em {
+  font-style: italic;
+}
